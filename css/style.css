@@ -1,0 +1,32 @@
+/* Общие стили для всех устройств */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Стили для ПК-мониторов */
+@media screen and (min-width: 1024px) {
+  .container {
+      position: relative;
+      width: 1440px;
+      height: 5381px;
+      background: #FFFFFF;
+    }
+
+    .inner-block {
+      position: absolute;
+      width: 1498px;
+      height: 678px;
+      left: -29px;
+      top: -7px;
+      background: #CBECFF;
+      border-radius: 40px;
+    }
+  
+}
+
+/* Стили для мобильных устройств */
+@media screen and (max-width: 767px) {
+  
+  
+}

@@ -13,7 +13,7 @@ body {
       background: #FFFFFF;
     }
 
-    .inner-block {
+    .Group_2180 {
       position: absolute;
       width: 1498px;
       height: 678px;
@@ -21,6 +21,16 @@ body {
       top: -7px;
       background: #CBECFF;
       border-radius: 40px;
+    }
+
+    .Rectangle_1742 {
+      position: absolute;
+      width: 122px;
+      height: 80px;
+      left: 306px;
+      top: 123px;
+      background: #FFFFFF;
+      border-radius: 20px;
     }
   
 }

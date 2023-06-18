@@ -25,17 +25,18 @@
     .top-block {
       background: #CBECFF;
       display: flex;
-      height: 400px;
+      height: 525px;
     }
 
     .left-block {
-      width: 40%;
+      width: 30%;
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      /*justify-content: center;*/
       align-items: flex-start;
       padding-left: 100px;
+      padding-top: 80px;
     }
 
     .logo {
@@ -55,7 +56,7 @@
       font-size: 36px;
       color: #0962E8;
       background-color: #ffffff;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 4px 8px;
     }
 
@@ -80,7 +81,70 @@
     }
 
     .right-block {
-      width: 60%;
+      position: relative;
+      width: 70%;
+    }
+
+    /***********/
+
+    .circle1 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 30px;
+      margin: auto;
+      height: 420px;
+      width: 420px;
+      background: url(img/Exclude1.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .circle2 {
+      position: absolute;
+      top: 10px;
+      bottom: 0;
+      left: 0;
+      right: 105px;
+      margin: auto;
+      height: 435px;
+      width: 435px;
+      background: url(img/Exclude.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .hand {
+      position: absolute;
+      top: -2px;
+      bottom: 0;
+      left: 55px;
+      right: 0;
+      margin: auto;
+      height: 525px;
+      width: 525px;
+      background: url(img/hand.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .iphone {
+      position: absolute;
+      top: 0;
+      bottom: 81px;
+      left: 0;
+      right: 154px;
+      margin: auto;
+      height: 290px;
+      width: 143px;
+      background: url(img/iphone.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
   </style>
@@ -97,9 +161,16 @@
       <p class="description">Гибкая мобильная платформа для быстрой реализации инвестиционных сервисов.</p>
       <button class="demo-button">Заказать демо</button>
     </div>
+    
     <div class="right-block">
-      <img src="path/to/image.jpg" alt="Изображение">
+
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="hand"></div>
+      <div class="iphone"></div>
+      
     </div>
+
   </div>
 </div>
 

@@ -2,4 +2,8 @@
 .icon-activity:before { content: '\e800'; } /* '' */
 .icon-filter:before { content: '\e801'; } /* '' */
 .icon-graph:before { content: '\e802'; } /* '' */
-.icon-setting:before { content: '\e803'; } /* '' */
+.icon-help:before { content: '\e803'; } /* '' */
+.icon-setting:before { content: '\e804'; } /* '' */
+.icon-save:before { content: '\e805'; } /* '' */
+.icon-raise:before { content: '\e806'; } /* '' */
+.icon-create:before { content: '\e807'; } /* '' */

@@ -273,12 +273,13 @@
     height: 328px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .content_details {
-    flex: 1;
-    margin: 10px 1px;
-    padding: 5px;
+    position: relative;
+    width: 49%;
+    margin-bottom: 20px;
   }
 
   .content_details_text_block {
@@ -337,6 +338,9 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .additionally_block_ttb {
@@ -386,7 +390,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
-    padding: 60px 50px 10px 0;
+    padding: 3.5rem 0rem 0rem 2.5rem;
   }
 
   .additionally_block_plus_icon {
@@ -396,7 +400,7 @@
     background: #EFF9FF;
     border-radius: 50%;
     top: 8px;
-    left: 0px;
+    left: 40px;
     background-position: center;
     background-size: 25px;
     background-repeat: no-repeat;
@@ -495,6 +499,10 @@
 
     .content_details_style {
       height: 215px;
+      width: 100%;
+    }
+
+    .content_details {
       width: 100%;
     }
 

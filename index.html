@@ -1,376 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Fin Kit Test</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/animation.css" type="text/css" />
-  <link rel="stylesheet" href="css/fontello.css" type="text/css" />
-  <link rel="stylesheet" href="css/fontello-codes.css" type="text/css" />
-  <link rel="stylesheet" href="css/fontello-embedded.css" type="text/css" />
-  <link rel="stylesheet" href="css/fontello-ie7.css" type="text/css" />
-  <link rel="stylesheet" href="css/fontello-ie7-codes.css" type="text/css" />
+<title>FinKitTest</title>
 
-  <style>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-    @font-face {
-      font-family: 'fontello';
-      src: url('font/fontello.eot');
-      src: url('font/fontello.woff') format('woff'),
-      url('font/fontello.ttf') format('truetype'),
-      url('font/fontello.svg#fontello') format('svg');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    .icon-graph {
-      color: #0962E8;
-      font-size: 18px;
-    }
-
-    .icon-activity {
-      color: #0962E8;
-      font-size: 18px;
-    }
-
-    .icon-filter {
-      color: #0962E8;
-      font-size: 18px;
-    }
-
-    .icon-setting {
-      color: #0962E8;
-      font-size: 18px;
-    }
-
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-
-    .container {
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 0 60px;
-    }
-
-    .top_block {
-      background: #CBECFF;
-      display: flex;
-      height: 480px;
-      position: relative;
-    }
-
-    .left_block {
-      width: 30%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      /*justify-content: center;*/
-      align-items: flex-start;
-      padding-left: 125px;
-      padding-top: 100px;
-    }
-
-    .logo {
-      text-align: center;
-    }
-
-    .black_text {
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 36px;
-      color: #29374E;
-    }
-
-    .white_text {
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 36px;
-      color: #0962E8;
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 4px 8px;
-    }
-
-    .description {
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      color: #29374E;
-      word-wrap: break-word;
-      text-align: left;
-      width: 250px;
-      font-weight: 400;
-    }
-
-    .demo_button {
-      font-family: 'Inter', sans-serif;
-      font-size: 18px;
-      color: #ffffff;
-      background-color: #007BFF;
-      border: none;
-      border-radius: 4px;
-      padding: 12px 24px;
-      cursor: pointer;
-    }
-
-    
-
-    /***********/
-
-    .right_block {
-      position: relative;
-      width: 70%;
-    }
-
-    .circle1,
-    .circle2,
-    .hand,
-    .iphone {
-      position: absolute;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .circle1 {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 480px;
-      width: 480px;
-      background-image: url(img/Exclude1.png);
-      background-size: 425px;
-      background-position: 38px 25px;
-    }
-
-    .circle2 {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 480px;
-      width: 480px;
-      background-image: url(img/Exclude.png);
-      background-size: 450px;
-      background-position: -15px center;
-    }
-
-    .hand {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 480px;
-      width: 480px;
-      background-image: url(img/hand.png);
-      background-size: 555px;
-      background-position: 17px -24px;
-    }
-
-    .iphone {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 480px;
-      width: 480px;
-      background-image: url(img/iphone.png);
-      background-size: 145px;
-      background-position: 118px 37px;
-    }
-
-    /*********/
-
-    .details_block {
-      position: absolute;
-      height: 80px;
-      bottom: -25px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      padding: 0 125px;
-      display: flex;
-      z-index: 1;
-    }
-
-    .details {
-      flex: 1;
-      margin: 0 1px;
-      padding: 5px;
-    }
-
-    .details_style {
-      position: relative;
-      background: #fff;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .details_icon {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      top: 10px;
-      right: 10px;
-      border-radius: 50%;
-      background: #EFF9FF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .details_text {
-      color: #29374E;
-      font-size: 12px;
-      padding: 11px 0 0 14px;
-    }
-
-    /************/
-
-    .content_block {
-      position: relative;
-      width: 100%;
-      background-color: #FFF;
-      height: 900px;
-      display: inline-block;
-    }
-
-    .content_title {
-      text-align: center;
-      width: 412px;
-      height: 80px;
-      margin: 0 auto;
-      margin-top: 80px;
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 27px;
-      line-height: 130%;
-      color: #29374E;
-      margin-bottom: 15px;
-    }
-
-    .content_details_block {
-      position: absolute;
-      height: 275px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      padding: 0 125px;
-      display: flex;
-    }
-
-    .content_details {
-      flex: 1;
-      margin: 0 1px;
-      padding: 5px;
-    }
-
-    .content_details_style {
-      background: #E9F6FF;
-      width: 100%;
-      height: 100%;
-      border-radius: 16px;
-      box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .content_details_title {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      padding: 20px 0 0 14px;
-    }
-
-    .content_details_text {
-      font-family: 'Inter';
-      font-style: normal;
-      color: #29374E;
-      font-size: 12px;
-      font-weight: 400;
-      padding: 10px 0 0 14px;
-    }
-
-  </style>
+<link rel="stylesheet" href="css/animation.css" type="text/css" />
+<link rel="stylesheet" href="css/fontello.css" type="text/css" />
+<link rel="stylesheet" href="css/fontello-codes.css" type="text/css" />
+<link rel="stylesheet" href="css/fontello-embedded.css" type="text/css" />
+<link rel="stylesheet" href="css/fontello-ie7.css" type="text/css" />
+<link rel="stylesheet" href="css/fontello-ie7-codes.css" type="text/css" />
 
 </head>
 <body>
-  <div class="container">
-  <div class="top_block">
-    <div class="left_block">
-      <div class="logo">
-        <span class="black_text">Fin</span>
-        <span class="white_text">Kit</span>
-      </div>
-      <p class="description">Гибкая мобильная платформа для быстрой реализации инвестиционных сервисов.</p>
-      <button class="demo_button">Заказать демо</button>
-    </div>
-    <div class="right_block">
-      <div class="circle1"></div>
-      <div class="circle2"></div>
-      <div class="hand"></div>
-      <div class="iphone"></div>
-    </div>
-    <div class="details_block">
-      <div class="details">
-        <div class="details_style">
-          <div class="details_text">
-            Удобный <br>пользовательский <br>интерфейс
-          </div>
-          <div class="details_icon"><div class="icon-graph"></div></div>
-        </div>
-      </div>
-      <div class="details">
-        <div class="details_style">
-          <div class="details_text">
-            Панель <br>администратора <br>для ведения учета
-          </div>
-          <div class="details_icon"><div class="icon-activity"></div></div>
-        </div>
-      </div>
-      <div class="details">
-        <div class="details_style">
-          <div class="details_text">
-            Простая <br>и быстрая<br> интеграция
-          </div>
-          <div class="details_icon"><div class="icon-filter"></div></div>
-        </div>
-      </div>
-      <div class="details">
-        <div class="details_style">
-          <div class="details_text">
-            Гибкая <br>масштабируемая <br>система 
-          </div>
-          <div class="details_icon"><div class="icon-setting"></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content_block">
-    <div class="content_title">Наши <font color="#0962E8">ключевые продукты</font> <br>для инвестиций</div>
+	<div class="wrapper">
+
+		<main class="content_block">
+
+			<div class="container">
+
+				<section class="information">
+					<div class="information_block container_style">
+						
+						<div class="information_wrapper">
+							<div class="information_title">Fin<span>Kit</span></div>
+							<div class="information_text">Гибкая мобильная платформа <br>для быстрой реализации <br> инвестиционных сервисов.</div>
+							<button class="information_button">Заказать демо</button>
+						
+							<picture>
+							  <img class="info_image" src="img/iphone.png" alt="cover">
+							</picture>
+
+              <div class="ru_en">
+                <div class="ru">Ru</div>
+                <div class="en">En</div>
+              </div>
+						</div>
+						
+					</div>
+				</section>
+
+				<section class="advantages">
+					<div class="advantages_block container_style">
+							<div class="advantage_item">
+								<div class="advantage_text">Удобный <br>пользовательский <br>интерфейс</div>
+          			<div class="advantage_icon"><div class="icon-graph"></div></div>
+							</div>
+					    <div class="advantage_item">
+					    	<div class="advantage_text">Панель <br>администратора <br>для ведения учета</div>
+          			<div class="advantage_icon"><div class="icon-activity"></div></div>
+					    </div>
+					    <div class="advantage_item">
+					    	<div class="advantage_text">Простая <br>и быстрая<br> интеграция</div>
+          			<div class="advantage_icon"><div class="icon-filter"></div></div>
+					    </div>
+					    <div class="advantage_item">
+					    	<div class="advantage_text">Гибкая <br>масштабируемая <br>система</div>
+          			<div class="advantage_icon"><div class="icon-setting"></div></div>
+					    </div>
+					</div>
+				</section>
+
+				<section class="key">
+					<div class="key_block container_style">
+						<div class="content_title">Наши <font color="#0962E8">ключевые продукты</font> <br>для инвестиций</div>
 
     <div class="content_details_block">
       <div class="content_details">
         <div class="content_details_style">
           <div class="content_details_title">Платформа для <br>автоследования</div>
           <div class="content_details_text">Копирование стратегий <br>в автономном режиме</div>
+          <div class="content_details_img" style="background-image: url(img/img-info1.png)"></div>
         </div>
       </div>
       <div class="content_details">
         <div class="content_details_style">
           <div class="content_details_title">Платформа для <br>робо-эдвайзинга</div>
           <div class="content_details_text">Персонализированный <br>подбор стратегий исходя из <br>заданных параметров</div>
+          <div class="content_details_img" style="background-image: url(img/img-info2.png)"></div>
         </div>
       </div>
     </div>
+					</div>
+				</section>
 
-  </div>
-</div>
+				<section class="additionally">
+					<div class="additionally_block container_style">
+						<div class="additionally_block_info">
+      
+              <div class="additionally_block_style">
+                <div class="additionally_block_ttb additionally_block_title"><font color="#0962E8">Представляем ценность</font> <br>для броĸера и банĸа</div>
+                <div class="additionally_block_ttb additionally_block_text">Мы помогаем броĸерам и банĸам запустить собственное мобильное приложение для инвестиций в ĸоротĸие сроĸи и с эĸономией бюджета</div>
+                <button class="additionally_button">Заказать демо</button>
+              </div>
+
+              <div class="additionally_block_style">
+                <div class="additionally_block_plus"><div class="additionally_block_plus_icon" style="background-image: url(img/save.svg)"></div>Эĸономим время и деньги на запусĸ digital сервисов</div>
+                <div class="additionally_block_plus"><div class="additionally_block_plus_icon" style="background-image: url(img/create.svg)"></div>Создаем канал привлечения новых клиентов</div>
+                <div class="additionally_block_plus"><div class="additionally_block_plus_icon" style="background-image: url(img/help.svg)"></div>Помогаем увеличить выручку путем запуска нового продукта</div>
+                <div class="additionally_block_plus"><div class="additionally_block_plus_icon" style="background-image: url(img/raise.svg)"></div>Повышаем лояльность действующих клиентов</div>
+              </div>
+
+    				</div>
+					</div>
+				</section>
+
+			</div>
+		</main>
+		
+	</div>
 
 </body>
 </html>

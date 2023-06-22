@@ -163,10 +163,9 @@
     padding: 0;
   }
 
-  .container_style {
-    max-width: 1222px;
-    padding: 0 5%;
-    padding-top: 0;
+  .section_style {
+    max-width: 1200px;
+    padding: 0 60px;
     margin: 0 auto;
   }
 
@@ -374,6 +373,7 @@
   }
 
   .additionally_block_title {
+    height: auto;
     font-weight: 500;
     font-size: 38px;
     line-height: 130%;
@@ -430,7 +430,21 @@
     background-repeat: no-repeat;
   }
 
+  @media screen and (max-width: 958px) {
+      .content_details {
+        width: 100%;
+      }
+
+      .content_details_block {
+        height: 695px;
+      }
+    }
+
   @media screen and (max-width: 768px) {
+    .section_style {
+      padding: 0 20px;
+    }
+
     .icon-save {
       color: #0962E8;
       font-size: 23px;

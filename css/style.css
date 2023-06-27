@@ -4,28 +4,15 @@
     border: 0;
   }
 
-  *, *:before, *:after {
+  *, ::before, ::after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
-  :focus, :active {
-    outline: none;
-  }
-
-  a:focus, a:active {
-    outline: none;
-  }
-
-  nav, footer, header, aside {
-    display: block;
-  }
-
   html, body {
     height: 100%;
     width: 100%;
-    font-size: 100%;
     line-height: 1;
     font-size: 16px;
     -ms-text-size-adjust: 100%;
@@ -33,44 +20,6 @@
     -webkit-text-size-adjust: 100%;
     font-family: 'Inter';
     font-style: normal;
-  }
-
-  input, button, textarea {
-    font-family: inherit;
-  }
-
-  input::-ms-clear {
-    display: none;
-  }
-
-  button {
-    cursor: pointer;
-  }
-
-  button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-
-  a, a:visited {
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-  ul li {
-    list-style: none;
-  }
-
-  img {
-    vertical-align: top;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
   }
 
   @font-face {
@@ -164,9 +113,10 @@
   }
 
   .section_style {
-    max-width: 1200px;
+    max-width: 1024px;
     padding: 0 60px;
     margin: 0 auto;
+    box-sizing: content-box;
   }
 
   .information {
@@ -176,12 +126,12 @@
   .information_block {
     display: flex;
     position: relative;
-    height: 631px;
+    height: 571px;
     padding-top: 115px;
   }
 
   .info_image {
-    width: 570px;
+    width: 625px;
     height: auto;
     position: absolute;
     top: 8%;
@@ -262,7 +212,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    padding: 22px 35px 22px 15px;
+    padding: 22px 35px 30px 15px;
   }
 
   .advantage_icon {
@@ -303,13 +253,12 @@
   .content_details {
     position: relative;
     width: 49%;
-    margin-bottom: 20px;
   }
 
   .content_details_text_block {
     width: 45%;
     height: 100%;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1.5rem 0rem 1rem 1rem;
     background: #E9F6FF;
   }
 
@@ -339,13 +288,17 @@
 
   .content_details_img {
     position: absolute;
-    width: 245px;
-    height: 334px;
+    width: 255px;
+    height: 345px;
     top: 0;
     right: 5px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .additionally {
+    margin-top: 135px;
   }
 
   .additionally_block_info {
@@ -387,7 +340,7 @@
     font-size: 14px;
     line-height: 140%;
     text-align: left;
-    padding-right: 140px;
+    padding-right: 105px;
   }
 
   .additionally_button {
@@ -432,8 +385,13 @@
   }
 
   @media screen and (max-width: 958px) {
+      .info_image {
+        width: 550px;
+      }
+
       .content_details {
         width: 100%;
+        margin-bottom: 20px;
       }
 
       .content_details_block {
@@ -499,7 +457,7 @@
     .information_block {
       flex-direction: column;
       padding-top: 444px;
-      height: 963px;
+      height: 525px;
     }
 
     .info_image {
@@ -593,6 +551,7 @@
 
     .content_details {
       width: 100%;
+      margin-bottom: 20px;
     }
 
     .content_details_text_block {
@@ -607,7 +566,7 @@
     }
 
     .content_details_text {
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .content_details_img {
@@ -616,6 +575,10 @@
       top: 8px;
       width: 160px;
       height: 215px;
+    }
+
+    .additionally {
+      margin-top: 0;
     }
 
     .additionally_block_info {
@@ -687,7 +650,7 @@
       }
 
       .information_block {
-        height: 985px;
+        height: 545px;
       }
 
       .advantage_item {
